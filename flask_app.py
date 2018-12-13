@@ -1,6 +1,8 @@
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
+stressometer=0
+
 @app.route('/', methods=['GET'])
 def main():
     # found in ../templates/
@@ -8,9 +10,10 @@ def main():
 
 @app.route('/process_inputs', methods=['POST'])
 def process_inputs():
-    name = request.form.get('input_name', '')
-    dropdown = request.form.get('input_dropdown', '')
-    select = request.form.get('input_select', '')
-    freeform = request.form.get('input_freeform', '')
+    ID = request.form.get('input_name', '')
+    Time = request.form.get('input_dropdown', '')
+    select = request.form.get('Happy Index', '')
+    freeform = request.form.get('Destress', '')
+    if dropdown ==
     return render_template("main_page.html", input_data=dropdown,
-                           output="You're a wizard %s." % name)
+                           output="statement")

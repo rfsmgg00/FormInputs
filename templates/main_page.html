@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <title>Form Input Template</title>
+    <title>How much stress does a stressmachine stress a stressant or stresser?</title>
     <link rel="stylesheet" href="/static/css/custom.css">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <!--<script src="../static/js/bootstrap.min.js"></script>-->
@@ -12,44 +12,50 @@
   </head>
   <body>
     <div id="banner" class="container">
-      <h1 class="display-4">Hello, world!</h1>
+      <h1 class="display-4">Welcome to the Stress Machine! how stressful is your stress and what should you do?</h1>
+      <h2>Please select the closest to your current situation in the multiple choice</h2>
     </div>
     <div class="container">
       <form action="{{ url_for('process_inputs') }}" method="post">
         <div class="form-group">
-          <label for="input_name">First Name</label>
-          <input type="text" class="form-control" name="input_name"  id="input_name" placeholder="Fred Flintstone">
+          <label for="input_name">Please enter an ID for most efficient registration</label>
+          <input type="text" class="form-control" name="input_name"  id="input_name" placeholder="Aaaaaaaa Prime">
         </div>
         <div class="form-group">
-          <label for="input_dropdown">Example select</label>
+          <label for="input_dropdown">What is the current due date for the earliest assignment you have not turned in?</label>
           <select class="form-control" name="input_dropdown" id="input_dropdown">
-            <option>1 fish</option>
-            <option>2 fish</option>
-            <option>red fish</option>
-            <option>the spanish inquisition</option>
-            <option>blue fish</option>
+            <option>Over a month away</option>
+            <option>Only a week left</option>
+            <option>It's due in 5 minutes pls help </option>
+            <option>I dunno see my secretary about that. What do you think I am, responsible?</option>
+            <option>Yesterday, I swear it was because of circumstances</option>
+            <option>A month ago and I <b>really care please help ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</b></option>
+            <option> </option>
           </select>
         </div>
         <div class="form-group">
-          <label for="input_select">Example multiple select</label>
-          <select multiple class="form-control" name="input_select" id="input_select">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+          <label for="input_select">When was the last time you felt happy?</label>
+          <select class="form-control" name="HappyIndex" id="HappyIndex">
+            <option>When I was with friends last week</option>
+            <option>When I was home alone snuggled up</option>
+            <option>Last month before I got this really bad project</option>
+            <option><strong>i don't remember all i know is stress and procrastination</strong></option>
+            <option>I, as an edgy teen, have never felt happiness and all I know is death and missery. I came out of the womb reading "The Raven" with Guyliner.</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="input_freeform">Example textarea</label>
-          <textarea class="form-control" name="input_freeform" id="input_freeform" rows="3"></textarea>
+        <div class = "form-group">
+          <label for="input_select">How often do you destress?</label>
+          <select class="form-control" name="Destress" id="Destress">
+            <option>Every time I get high duuud-Wait, you aren't with the feds are you?</option>
+            <option>Once a week I try to have a me day so I don't crumble to a ball of anxiety</option>
+            <option>Destress? Are you traying to get me off coffee? HUH? HUH? ARE YOU? GET OUT!</option>
+            <option>I don't have time, but I make it by procrastination.</option>
+          </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
     <div class="container">
-      {% if input_data %} {{ input_data }} {% endif %}
-      <br />
       {% if output %} {{ output }} {% endif %}
     </div>
   </body>
